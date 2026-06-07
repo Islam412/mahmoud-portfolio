@@ -114,31 +114,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            {/* روابط سريعة */}
-            <div className="glass-effect rounded-2xl p-8 mt-6">
-              <h3 className="text-2xl font-bold mb-6 text-center gradient-text">
-                {t('contact.quickLinks')}
-              </h3>
-              <div className="space-y-3">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ x: language === 'ar' ? -10 : 10 }}
-                    className="flex items-center justify-between p-3 rounded-xl bg-dark-200 hover:bg-gradient-to-r hover:from-accent-primary/20 hover:to-accent-secondary/20 transition-all group"
-                  >
-                    <span className="flex items-center gap-3">
-                      <social.icon className="w-6 h-6" style={{ color: social.color }} />
-                      <span className="text-white font-medium">{social.name}</span>
-                    </span>
-                    <span className="text-accent-primary group-hover:translate-x-1 transition-transform">➔</span>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

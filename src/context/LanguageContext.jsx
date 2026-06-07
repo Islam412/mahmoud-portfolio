@@ -4,6 +4,7 @@ const LanguageContext = createContext();
 
 export const translations = {
   ar: {
+    // Navbar
     nav: {
       home: 'الرئيسية',
       services: 'الخدمات',
@@ -11,6 +12,7 @@ export const translations = {
       about: 'عني',
       contact: 'اتصل بي'
     },
+    // Hero
     hero: {
       badge: 'مصمم جرافيك محترف',
       name: 'محمود حسني',
@@ -21,32 +23,27 @@ export const translations = {
       projects: 'مشروع مكتمل',
       clients: 'عميل سعيد'
     },
+    // Services
     services: {
       title: 'الخدمات',
       titleHighlight: 'التي أقدمها',
       subtitle: 'أحول أفكارك إلى تصاميم إبداعية تجذب الانتباه وتحقق أهدافك',
       items: [
-        { title: 'تصميم لوحات', titleEn: 'Art Board Design', desc: 'تصميم لوحات فنية احترافية بأسلوب عصري ومبدع' },
-        { title: 'تصميم لوجو', titleEn: 'Logo Design', desc: 'هوية بصرية فريدة تعبر عن شخصية علامتك التجارية' },
-        { title: 'السوشيال ميديا', titleEn: 'Social Media', desc: 'تصاميم جذابة لمنصات التواصل الاجتماعي' },
-        { title: 'المطبوعات', titleEn: 'Print Design', desc: 'جميع أنواع المطبوعات الدعائية والرسمية' },
-        { title: 'وجهات كلادينج', titleEn: 'Cladding Designs', desc: 'تصاميم كلادينج احترافية للمباني والواجهات' },
-        { title: 'دعم مستمر', titleEn: '24/7 Support', desc: 'دعم فني ومتابعة مستمرة لجميع المشاريع' }
+        { title: 'تصميم لوحات', desc: 'تصميم لوحات فنية احترافية بأسلوب عصري ومبدع' },
+        { title: 'تصميم لوجو', desc: 'هوية بصرية فريدة تعبر عن شخصية علامتك التجارية' },
+        { title: 'السوشيال ميديا', desc: 'تصاميم جذابة لمنصات التواصل الاجتماعي' },
+        { title: 'المطبوعات', desc: 'جميع أنواع المطبوعات الدعائية والرسمية' },
+        { title: 'وجهات كلادينج', desc: 'تصاميم كلادينج احترافية للمباني والواجهات' },
+        { title: 'دعم مستمر', desc: 'دعم فني ومتابعة مستمرة لجميع المشاريع' }
       ]
     },
+    // Portfolio
     portfolio: {
       title: 'أعمالي',
       titleHighlight: 'المميزة',
-      subtitle: 'مجموعة من أحدث تصاميمي التي تعكس شغفي بالإبداع والتميز',
-      categories: {
-        all: 'الكل',
-        logos: 'لوجوهات',
-        artboards: 'لوحات',
-        social: 'سوشيال ميديا',
-        prints: 'مطبوعات',
-        cladding: 'كلادينج'
-      }
+      subtitle: 'مجموعة من أحدث تصاميمي التي تعكس شغفي بالإبداع والتميز'
     },
+    // About
     about: {
       title: 'من',
       titleHighlight: 'هو محمود حسني؟',
@@ -55,6 +52,7 @@ export const translations = {
       desc2: 'أقدم تصاميم فريدة تجمع بين الجمال والوظيفة، وأحرص على فهم احتياجات عملائي لتقديم أفضل الحلول الإبداعية في:',
       services: ['تصميم لوحات', 'تصميم لوجو', 'سوشيال ميديا', 'مطبوعات', 'وجهات كلادينج']
     },
+    // Contact
     contact: {
       title: 'تواصل',
       titleHighlight: 'معي',
@@ -65,12 +63,14 @@ export const translations = {
       socialTitle: 'وسائل التواصل الاجتماعي',
       quickLinks: 'روابط سريعة'
     },
+    // Footer
     footer: {
       rights: 'جميع الحقوق محفوظة',
       developed: 'تم التطوير بواسطة'
     }
   },
   en: {
+    // Navbar
     nav: {
       home: 'Home',
       services: 'Services',
@@ -78,6 +78,7 @@ export const translations = {
       about: 'About',
       contact: 'Contact'
     },
+    // Hero
     hero: {
       badge: 'Professional Graphic Designer',
       name: 'Mahmoud Hosni',
@@ -88,32 +89,27 @@ export const translations = {
       projects: 'Completed Projects',
       clients: 'Happy Clients'
     },
+    // Services
     services: {
       title: 'Services',
       titleHighlight: 'I Provide',
       subtitle: 'I turn your ideas into creative designs that grab attention and achieve your goals',
       items: [
-        { title: 'Art Boards', titleEn: 'Art Board Design', desc: 'Professional artistic board designs in a modern and creative style' },
-        { title: 'Logo Design', titleEn: 'Logo Design', desc: 'Unique visual identity that expresses your brand personality' },
-        { title: 'Social Media', titleEn: 'Social Media', desc: 'Attractive designs for social media platforms' },
-        { title: 'Print Design', titleEn: 'Print Design', desc: 'All types of promotional and official prints' },
-        { title: 'Cladding', titleEn: 'Cladding Designs', desc: 'Professional cladding designs for buildings and facades' },
-        { title: '24/7 Support', titleEn: '24/7 Support', desc: 'Technical support and continuous follow-up for all projects' }
+        { title: 'Art Boards', desc: 'Professional artistic board designs in a modern and creative style' },
+        { title: 'Logo Design', desc: 'Unique visual identity that expresses your brand personality' },
+        { title: 'Social Media', desc: 'Attractive designs for social media platforms' },
+        { title: 'Print Design', desc: 'All types of promotional and official prints' },
+        { title: 'Cladding', desc: 'Professional cladding designs for buildings and facades' },
+        { title: '24/7 Support', desc: 'Technical support and continuous follow-up for all projects' }
       ]
     },
+    // Portfolio
     portfolio: {
       title: 'My',
       titleHighlight: 'Portfolio',
-      subtitle: 'A collection of my latest designs that reflect my passion for creativity and excellence',
-      categories: {
-        all: 'All',
-        logos: 'Logos',
-        artboards: 'Art Boards',
-        social: 'Social Media',
-        prints: 'Prints',
-        cladding: 'Cladding'
-      }
+      subtitle: 'A collection of my latest designs that reflect my passion for creativity and excellence'
     },
+    // About
     about: {
       title: 'Who is',
       titleHighlight: 'Mahmoud Hosni?',
@@ -122,6 +118,7 @@ export const translations = {
       desc2: 'I provide unique designs that combine beauty and functionality, and I strive to understand my clients needs to provide the best creative solutions in:',
       services: ['Art Boards', 'Logo Design', 'Social Media', 'Print Design', 'Cladding']
     },
+    // Contact
     contact: {
       title: 'Contact',
       titleHighlight: 'Me',
@@ -132,6 +129,7 @@ export const translations = {
       socialTitle: 'Social Media',
       quickLinks: 'Quick Links'
     },
+    // Footer
     footer: {
       rights: 'All Rights Reserved',
       developed: 'Developed by'
