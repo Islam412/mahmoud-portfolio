@@ -4,7 +4,12 @@ const LanguageContext = createContext();
 
 export const translations = {
   ar: {
-    // Navbar
+    // أسماء
+    names: {
+      designer: 'محمود حسني',
+      developer: 'إسلام حمدى'
+    },
+    // شريط التنقل
     nav: {
       home: 'الرئيسية',
       services: 'الخدمات',
@@ -12,7 +17,7 @@ export const translations = {
       about: 'عني',
       contact: 'اتصل بي'
     },
-    // Hero
+    // القسم الرئيسي
     hero: {
       badge: 'مصمم جرافيك محترف',
       name: 'محمود حسني',
@@ -23,7 +28,7 @@ export const translations = {
       projects: 'مشروع مكتمل',
       clients: 'عميل سعيد'
     },
-    // Services
+    // الخدمات
     services: {
       title: 'الخدمات',
       titleHighlight: 'التي أقدمها',
@@ -37,13 +42,13 @@ export const translations = {
         { title: 'دعم مستمر', desc: 'دعم فني ومتابعة مستمرة لجميع المشاريع' }
       ]
     },
-    // Portfolio
+    // أعمالي
     portfolio: {
       title: 'أعمالي',
       titleHighlight: 'المميزة',
       subtitle: 'مجموعة من أحدث تصاميمي التي تعكس شغفي بالإبداع والتميز'
     },
-    // About
+    // عني
     about: {
       title: 'من',
       titleHighlight: 'هو محمود حسني؟',
@@ -52,7 +57,7 @@ export const translations = {
       desc2: 'أقدم تصاميم فريدة تجمع بين الجمال والوظيفة، وأحرص على فهم احتياجات عملائي لتقديم أفضل الحلول الإبداعية في:',
       services: ['تصميم لوحات', 'تصميم لوجو', 'سوشيال ميديا', 'مطبوعات', 'وجهات كلادينج']
     },
-    // Contact
+    // اتصل بي
     contact: {
       title: 'تواصل',
       titleHighlight: 'معي',
@@ -63,14 +68,19 @@ export const translations = {
       socialTitle: 'وسائل التواصل الاجتماعي',
       quickLinks: 'روابط سريعة'
     },
-    // Footer
+    // التذييل
     footer: {
       rights: 'جميع الحقوق محفوظة',
       developed: 'تم التطوير بواسطة'
     }
   },
   en: {
-    // Navbar
+    // Names
+    names: {
+      designer: 'Mahmoud Hosni',
+      developer: 'Islam Hamdy'
+    },
+    // Navigation
     nav: {
       home: 'Home',
       services: 'Services',
@@ -78,7 +88,7 @@ export const translations = {
       about: 'About',
       contact: 'Contact'
     },
-    // Hero
+    // Hero Section
     hero: {
       badge: 'Professional Graphic Designer',
       name: 'Mahmoud Hosni',

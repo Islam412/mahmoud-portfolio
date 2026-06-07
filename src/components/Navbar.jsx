@@ -24,6 +24,10 @@ const Navbar = () => {
     { key: 'contact', href: '#contact' },
   ];
 
+  // الحصول على الاسم الكامل للمصمم
+  const designerName = t('names.designer');
+  const nameParts = designerName.split(' ');
+  
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -35,15 +39,25 @@ const Navbar = () => {
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
+        {/* شعار الموقع - اسم المصمم */}
         <motion.a 
           href="#home"
           whileHover={{ scale: 1.05 }} 
           className="text-2xl font-bold"
         >
-          <span className="gradient-text">Mahmoud</span>
-          <span className="text-white"> Hosni</span>
+          {language === 'ar' ? (
+            // للعربية: الاسم كاملاً
+            <span className="gradient-text">{designerName}</span>
+          ) : (
+            // للإنجليزية: الجزء الأول باللون المتدرج والثاني أبيض
+            <>
+              <span className="gradient-text">{nameParts[0]}</span>
+              <span className="text-white"> {nameParts[1]}</span>
+            </>
+          )}
         </motion.a>
 
+        {/* روابط التنقل - سطح المكتب */}
         <div className="hidden md:flex space-x-8 space-x-reverse items-center">
           {navLinks.map((link) => (
             <a 
@@ -68,6 +82,7 @@ const Navbar = () => {
           </motion.button>
         </div>
 
+        {/* زر القائمة للجوال */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-white"
@@ -76,7 +91,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* القائمة المنسدلة للجوال */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}

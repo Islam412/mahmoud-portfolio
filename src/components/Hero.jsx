@@ -50,7 +50,7 @@ const Hero = () => {
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="flex-1">
             <div className="relative w-80 h-80 mx-auto">
               <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-accent-primary/50 shadow-2xl">
-                <img src="https://placehold.co/400x400/16213e/e94560/png?text=Mahmoud+Hosni" alt="Mahmoud Hosni" className="w-full h-full object-cover" />
+                <img src="https://placehold.co/400x400/16213e/e94560/png?text=Mahmoud+Hosni" alt={t('names.designer')} className="w-full h-full object-cover" />
               </div>
             </div>
           </motion.div>
