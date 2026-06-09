@@ -24,45 +24,291 @@ const Portfolio = () => {
     { id: 'cladding', name: language === 'ar' ? 'كلادينج' : 'Cladding', nameEn: 'Cladding' },
   ];
 
-  // إنشاء 60 صورة تجريبية (استبدلها بصورك الحقيقية)
-  const generatePortfolioItems = () => {
-    const items = [];
-    const categories_list = ['logos', 'artboards', 'social', 'prints', 'cladding'];
-    const titles_ar = {
-      logos: 'لوجو احترافي',
-      artboards: 'لوحة فنية',
-      social: 'تصميم سوشيال ميديا',
-      prints: 'مطبوعات دعائية',
-      cladding: 'واجهة كلادينج'
-    };
-    const titles_en = {
-      logos: 'Professional Logo',
-      artboards: 'Art Board',
-      social: 'Social Media Design',
-      prints: 'Print Design',
-      cladding: 'Cladding Design'
-    };
+  // ==============================================
+  // أعمال محمود حسني - ضع صورك الحقيقية هنا
+  // ==============================================
+  const portfolioItems = [
+    // ========== اللوجوهات (Logos) ==========
+    {
+      id: 1,
+      category: 'logos',
+      title_ar: 'لوجو شركة ابتكار',
+      title_en: 'Ebtekar Company Logo',
+      description_ar: 'لوجو عصري لشركة تكنولوجيا',
+      description_en: 'Modern logo for a technology company',
+      image: '/images/portfolio/logos/logo-01.jpg',
+    },
+    {
+      id: 2,
+      category: 'logos',
+      title_ar: 'لوجو مطعم الأندلس',
+      title_en: 'Andalus Restaurant Logo',
+      description_ar: 'لوجو راقي لمطعم فاخر',
+      description_en: 'Elegant logo for a luxury restaurant',
+      image: '/images/portfolio/logos/logo-02.jpg',
+    },
+    {
+      id: 3,
+      category: 'logos',
+      title_ar: 'لوجو شركة المقاولات المتحدة',
+      title_en: 'United Contracting Company Logo',
+      description_ar: 'لوجو قوي يعبر عن الثقة والقوة',
+      description_en: 'Strong logo expressing trust and power',
+      image: '/images/portfolio/logos/logo-03.jpg',
+    },
+    {
+      id: 4,
+      category: 'logos',
+      title_ar: 'لوجو علامة تجارية',
+      title_en: 'Brand Identity Logo',
+      description_ar: 'هوية بصرية متكاملة للعلامة التجارية',
+      description_en: 'Complete visual identity for the brand',
+      image: '/images/portfolio/logos/logo-04.jpg',
+    },
+    {
+      id: 5,
+      category: 'logos',
+      title_ar: 'لوجو مقهى',
+      title_en: 'Coffee Shop Logo',
+      description_ar: 'لوجو دافئ يعبر عن أجواء المقهى',
+      description_en: 'Warm logo reflecting coffee shop atmosphere',
+      image: '/images/portfolio/logos/logo-05.jpg',
+    },
+    {
+      id: 6,
+      category: 'logos',
+      title_ar: 'لوجو متجر إلكتروني',
+      title_en: 'E-commerce Store Logo',
+      description_ar: 'لوجو عصري لمتجر إلكتروني',
+      description_en: 'Modern logo for an e-commerce store',
+      image: '/images/portfolio/logos/logo-06.jpg',
+    },
 
-    for (let i = 1; i <= 60; i++) {
-      const category = categories_list[i % categories_list.length];
-      const num = String(i).padStart(2, '0');
-      items.push({
-        id: i,
-        category: category,
-        title_ar: `${titles_ar[category]} ${num}`,
-        title_en: `${titles_en[category]} ${num}`,
-        description_ar: `تصميم ${titles_ar[category]} رقم ${i} - إبداع واحترافية`,
-        description_en: `${titles_en[category]} ${num} - Creative and Professional`,
-        image: `https://picsum.photos/id/${100 + i}/600/400`,
-        // للصور الحقيقية، استخدم هذا المسار:
-        // image: `/images/portfolio/${category}/${i}.jpg`
-      });
-    }
-    return items;
-  };
+    // ========== اللوحات الفنية (Art Boards) ==========
+    {
+      id: 7,
+      category: 'artboards',
+      title_ar: 'لوحة فنية طبيعة صامتة',
+      title_en: 'Still Life Nature Art',
+      description_ar: 'تصميم فني مستوحى من جمال الطبيعة',
+      description_en: 'Artistic design inspired by nature\'s beauty',
+      image: '/images/portfolio/artboards/art-01.jpg',
+    },
+    {
+      id: 8,
+      category: 'artboards',
+      title_ar: 'لوحة تجريدية ألوان',
+      title_en: 'Abstract Color Art',
+      description_ar: 'لوحة فنية بألوان زاهية ومبهجة',
+      description_en: 'Vibrant and cheerful abstract art board',
+      image: '/images/portfolio/artboards/art-02.jpg',
+    },
+    {
+      id: 9,
+      category: 'artboards',
+      title_ar: 'لوحة فنية حضرية',
+      title_en: 'Urban Art Board',
+      description_ar: 'تصميم يعكس روح المدينة الحديثة',
+      description_en: 'Design reflecting the spirit of the modern city',
+      image: '/images/portfolio/artboards/art-03.jpg',
+    },
+    {
+      id: 10,
+      category: 'artboards',
+      title_ar: 'لوحة فنية بحرية',
+      title_en: 'Marine Art Board',
+      description_ar: 'جمال البحر والسحر في لوحة فنية',
+      description_en: 'The beauty and magic of the sea in an art board',
+      image: '/images/portfolio/artboards/art-04.jpg',
+    },
+    {
+      id: 11,
+      category: 'artboards',
+      title_ar: 'لوحة فنية مستقبلية',
+      title_en: 'Futuristic Art Board',
+      description_ar: 'تصميم بخيال علمي وتقني',
+      description_en: 'Sci-fi and futuristic design',
+      image: '/images/portfolio/artboards/art-05.jpg',
+    },
+    {
+      id: 12,
+      category: 'artboards',
+      title_ar: 'لوحة فنية كلاسيكية',
+      title_en: 'Classic Art Board',
+      description_ar: 'لمسة كلاسيكية أنيقة',
+      description_en: 'Elegant classic touch',
+      image: '/images/portfolio/artboards/art-06.jpg',
+    },
 
-  const portfolioItems = generatePortfolioItems();
-  
+    // ========== سوشيال ميديا (Social Media) ==========
+    {
+      id: 13,
+      category: 'social',
+      title_ar: 'بوست انستجرام تخفيضات',
+      title_en: 'Instagram Sale Post',
+      description_ar: 'تصميم إعلاني لتخفيضات العيد',
+      description_en: 'Promotional design for Eid sales',
+      image: '/images/portfolio/social/social-01.jpg',
+    },
+    {
+      id: 14,
+      category: 'social',
+      title_ar: 'بوست فيسبوك عرض خاص',
+      title_en: 'Facebook Special Offer',
+      description_ar: 'تصميم مميز للعروض الخاصة',
+      description_en: 'Distinctive design for special offers',
+      image: '/images/portfolio/social/social-02.jpg',
+    },
+    {
+      id: 15,
+      category: 'social',
+      title_ar: 'ستوري انستجرام تفاعلي',
+      title_en: 'Interactive Instagram Story',
+      description_ar: 'تصميم جذاب للستوري',
+      description_en: 'Attractive story design',
+      image: '/images/portfolio/social/social-03.jpg',
+    },
+    {
+      id: 16,
+      category: 'social',
+      title_ar: 'غلاف فيسبوك',
+      title_en: 'Facebook Cover',
+      description_ar: 'غلاف احترافي لصفحة فيسبوك',
+      description_en: 'Professional Facebook page cover',
+      image: '/images/portfolio/social/social-04.jpg',
+    },
+    {
+      id: 17,
+      category: 'social',
+      title_ar: 'بوست انستجرام منتج جديد',
+      title_en: 'Instagram New Product Post',
+      description_ar: 'ترويج لمنتج جديد بطريقة مبتكرة',
+      description_en: 'Promoting a new product in an innovative way',
+      image: '/images/portfolio/social/social-05.jpg',
+    },
+    {
+      id: 18,
+      category: 'social',
+      title_ar: 'بوست لينكد إن',
+      title_en: 'LinkedIn Post',
+      description_ar: 'تصميم احترافي لمنصة لينكد إن',
+      description_en: 'Professional design for LinkedIn platform',
+      image: '/images/portfolio/social/social-06.jpg',
+    },
+
+    // ========== مطبوعات (Prints) ==========
+    {
+      id: 19,
+      category: 'prints',
+      title_ar: 'بروشور شركة ثلاثي الأبعاد',
+      title_en: '3D Company Brochure',
+      description_ar: 'بروشور دعائي ثلاثي الأبعاد',
+      description_en: '3D promotional brochure',
+      image: '/images/portfolio/prints/print-01.jpg',
+    },
+    {
+      id: 20,
+      category: 'prints',
+      title_ar: 'بطاقة شخصية فاخرة',
+      title_en: 'Luxury Business Card',
+      description_ar: 'بطاقة أعمال بتصميم عصري',
+      description_en: 'Modern business card design',
+      image: '/images/portfolio/prints/print-02.jpg',
+    },
+    {
+      id: 21,
+      category: 'prints',
+      title_ar: 'كتيب تعريفي للشركة',
+      title_en: 'Company Profile Booklet',
+      description_ar: 'كتيب يعرف بخدمات الشركة',
+      description_en: 'Booklet introducing company services',
+      image: '/images/portfolio/prints/print-03.jpg',
+    },
+    {
+      id: 22,
+      category: 'prints',
+      title_ar: 'ملصق دعائي',
+      title_en: 'Promotional Poster',
+      description_ar: 'ملصق إعلاني بحجم كبير',
+      description_en: 'Large format promotional poster',
+      image: '/images/portfolio/prints/print-04.jpg',
+    },
+    {
+      id: 23,
+      category: 'prints',
+      title_ar: 'غلاف مجلة',
+      title_en: 'Magazine Cover',
+      description_ar: 'تصميم غلاف مجلة احترافي',
+      description_en: 'Professional magazine cover design',
+      image: '/images/portfolio/prints/print-05.jpg',
+    },
+    {
+      id: 24,
+      category: 'prints',
+      title_ar: 'ورقية رسمية',
+      title_en: 'Official Letterhead',
+      description_ar: 'تصميم ورقية رسمية للشركات',
+      description_en: 'Official letterhead design for companies',
+      image: '/images/portfolio/prints/print-06.jpg',
+    },
+
+    // ========== كلادينج (Cladding) ==========
+    {
+      id: 25,
+      category: 'cladding',
+      title_ar: 'واجهة مبنى تجاري حديث',
+      title_en: 'Modern Commercial Building Facade',
+      description_ar: 'تصميم كلادينج حديث لمبنى تجاري',
+      description_en: 'Modern cladding design for a commercial building',
+      image: '/images/portfolio/cladding/cladding-01.jpg',
+    },
+    {
+      id: 26,
+      category: 'cladding',
+      title_ar: 'واجهة فيلا سكنية فاخرة',
+      title_en: 'Luxury Residential Villa Facade',
+      description_ar: 'تصميم كلادينج فاخر لفيلا سكنية',
+      description_en: 'Luxury cladding design for a residential villa',
+      image: '/images/portfolio/cladding/cladding-02.jpg',
+    },
+    {
+      id: 27,
+      category: 'cladding',
+      title_ar: 'واجهة مبنى إداري',
+      title_en: 'Administrative Building Facade',
+      description_ar: 'تصميم عصري للمباني الإدارية',
+      description_en: 'Modern design for administrative buildings',
+      image: '/images/portfolio/cladding/cladding-03.jpg',
+    },
+    {
+      id: 28,
+      category: 'cladding',
+      title_ar: 'واجهة مطعم',
+      title_en: 'Restaurant Facade',
+      description_ar: 'تصميم كلادينج جذاب للمطاعم',
+      description_en: 'Attractive cladding design for restaurants',
+      image: '/images/portfolio/cladding/cladding-04.jpg',
+    },
+    {
+      id: 29,
+      category: 'cladding',
+      title_ar: 'واجهة فندق',
+      title_en: 'Hotel Facade',
+      description_ar: 'تصميم كلادينج فاخر للفنادق',
+      description_en: 'Luxury cladding design for hotels',
+      image: '/images/portfolio/cladding/cladding-05.jpg',
+    },
+    {
+      id: 30,
+      category: 'cladding',
+      title_ar: 'واجهة مول تجاري',
+      title_en: 'Shopping Mall Facade',
+      description_ar: 'تصميم كلادينج جذاب للمولات',
+      description_en: 'Attractive cladding design for malls',
+      image: '/images/portfolio/cladding/cladding-06.jpg',
+    },
+  ];
+
   // تصفية العناصر حسب التصنيف
   const filteredItems = activeCategory === 'all' 
     ? portfolioItems 
@@ -172,6 +418,9 @@ const Portfolio = () => {
                       alt={language === 'ar' ? item.title_ar : item.title_en}
                       className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                       loading="lazy"
+                      onError={(e) => {
+                        e.target.src = 'https://placehold.co/600x400/16213e/e94560/png?text=صورة+قريبا';
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-400 via-dark-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
