@@ -55,18 +55,9 @@ bash
 
 npm run build
 
-Project Structure (typical)
+Project Structure:
 
     src/ — React source code
     index.html — Vite entry HTML
     tailwind.config.js — Tailwind configuration
     vite.config.js — Vite configuration
-
-Notes
-
-If you want, I can also update this README to include:
-
-    project sections (About / Skills / Projects / Experience)
-    more detailed screenshot captions
-    badges (stars, build status, etc.)
-    deployment steps (Vercel)
