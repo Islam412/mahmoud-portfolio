@@ -18,14 +18,13 @@ const Portfolio = () => {
   const categories = [
     { id: 'all', name: language === 'ar' ? 'الكل' : 'All', nameEn: 'All' },
     { id: 'logos', name: language === 'ar' ? 'لوجوهات' : 'Logos', nameEn: 'Logos' },
-    // { id: 'artboards', name: language === 'ar' ? 'لوحات فنية' : 'Art Boards', nameEn: 'Art Boards' },
     { id: 'social', name: language === 'ar' ? 'سوشيال ميديا' : 'Social Media', nameEn: 'Social Media' },
     { id: 'prints', name: language === 'ar' ? 'مطبوعات' : 'Prints', nameEn: 'Prints' },
     { id: 'cladding', name: language === 'ar' ? 'كلادينج' : 'Cladding', nameEn: 'Cladding' },
   ];
 
   // ==============================================
-  // أعمال محمود حسني - ضع صورك الحقيقية هنا
+  // أعمال محمود حسني - (تم حفظ بياناتك كما هي)
   // ==============================================
   const portfolioItems = [
     // ========== اللوجوهات (Logos) ==========
@@ -137,63 +136,6 @@ const Portfolio = () => {
       description_en: 'Modern logo for an e-commerce store',
       image: '/images/portfolio/logos/12.jpg',
     },
-    
-
-    // ========== اللوحات الفنية (Art Boards) ==========
-    // {
-    //   id: 7,
-    //   category: 'artboards',
-    //   title_ar: 'لوحة فنية طبيعة صامتة',
-    //   title_en: 'Still Life Nature Art',
-    //   description_ar: 'تصميم فني مستوحى من جمال الطبيعة',
-    //   description_en: 'Artistic design inspired by nature\'s beauty',
-    //   image: '/images/portfolio/artboards/art-01.jpg',
-    // },
-    // {
-    //   id: 8,
-    //   category: 'artboards',
-    //   title_ar: 'لوحة تجريدية ألوان',
-    //   title_en: 'Abstract Color Art',
-    //   description_ar: 'لوحة فنية بألوان زاهية ومبهجة',
-    //   description_en: 'Vibrant and cheerful abstract art board',
-    //   image: '/images/portfolio/artboards/art-02.jpg',
-    // },
-    // {
-    //   id: 9,
-    //   category: 'artboards',
-    //   title_ar: 'لوحة فنية حضرية',
-    //   title_en: 'Urban Art Board',
-    //   description_ar: 'تصميم يعكس روح المدينة الحديثة',
-    //   description_en: 'Design reflecting the spirit of the modern city',
-    //   image: '/images/portfolio/artboards/art-03.jpg',
-    // },
-    // {
-    //   id: 10,
-    //   category: 'artboards',
-    //   title_ar: 'لوحة فنية بحرية',
-    //   title_en: 'Marine Art Board',
-    //   description_ar: 'جمال البحر والسحر في لوحة فنية',
-    //   description_en: 'The beauty and magic of the sea in an art board',
-    //   image: '/images/portfolio/artboards/art-04.jpg',
-    // },
-    // {
-    //   id: 11,
-    //   category: 'artboards',
-    //   title_ar: 'لوحة فنية مستقبلية',
-    //   title_en: 'Futuristic Art Board',
-    //   description_ar: 'تصميم بخيال علمي وتقني',
-    //   description_en: 'Sci-fi and futuristic design',
-    //   image: '/images/portfolio/artboards/art-05.jpg',
-    // },
-    // {
-    //   id: 12,
-    //   category: 'artboards',
-    //   title_ar: 'لوحة فنية كلاسيكية',
-    //   title_en: 'Classic Art Board',
-    //   description_ar: 'لمسة كلاسيكية أنيقة',
-    //   description_en: 'Elegant classic touch',
-    //   image: '/images/portfolio/artboards/art-06.jpg',
-    // },
 
     // ========== سوشيال ميديا (Social Media) ==========
     {
@@ -792,7 +734,7 @@ const Portfolio = () => {
           </>
         )}
 
-        {/* عرض الصور بتكبير (Lightbox) */}
+        {/* عرض الصور بتكبير (Lightbox) - الصورة بتظهر بشكل مكبر عند الضغط عليها */}
         {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
