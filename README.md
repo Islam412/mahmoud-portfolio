@@ -70,6 +70,3 @@ If you want, I can also update this README to include:
     more detailed screenshot captions
     badges (stars, build status, etc.)
     deployment steps (Vercel)
-
-
-If you send me what sections you want in the portfolio (About, Skills, Projects, Contact, etc.) + the screenshot filenames/links, I’ll edit the README to match exactly.
